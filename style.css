@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.grid{
+    display: grid;
+    height: 100hv;
+    grid-auto-columns: 50% 50%;
+    grid-auto-rows: 50% 50%;
+    grid-template-areas: 
+    "a b"
+    "a b";
+}
+
+.item{
+    height: 100vh;
+}
+
+.a{
+    grid-area: a;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.b{
+    grid-area: b;
+    background: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table, th, td, tr{
+    border: 2px solid black;
+    padding: 2px;
+    background: whitesmoke;
+    color: black;
+}
+
+@media only screen and (max-width: 550px){
+    .a{
+        background: red;
+    }
+
+    .b{
+        background: blue;
+    }
+}
